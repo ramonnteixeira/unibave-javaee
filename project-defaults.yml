@@ -1,0 +1,16 @@
+swarm:
+  port:
+    offset: 0
+  datasources:
+# Caso queira utilizar outro banco
+#    jdbc-drivers:
+#      myh2:
+#        driver-class-name: org.h2.Driver
+#        xa-datasource-name: org.h2.jdbcx.JdbcDataSource
+#        driver-module-name: com.h2database.h2
+    data-sources:
+      unibaveDS:
+        driver-name: h2
+        connection-url: jdbc:h2:mem:ecommerce;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        user-name: sa
+        password: sa
